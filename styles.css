@@ -1,0 +1,87 @@
+:root {
+    --primary: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.primaryColor {
+    color: var(--primary)
+}
+
+/* Hero section */
+
+.heroContainer {
+    display: flex;
+    width: 90vw;
+    margin-top: 25vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.heroTitle {
+    font-size: 6vw;
+}
+
+.heroSubtitle {
+    margin: 2vh 0;
+}
+
+.subtitle {
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.90);
+}
+
+.tinierSubtitle {
+    font-size: 1vw;
+    color: rgba(0, 0, 0, 0.80);
+}
+
+button {
+    padding: 1.5vh 1.5vw;
+    border: none;
+
+}
+
+.ctaPrimaryButton {
+    margin-right: 1vw;
+    background-color: var(--primary);
+    font-size: 1.2vw;
+}
+
+.ctaSecondaryButton {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.2vw;
+}
+
+.stackContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+/* Cards section */
+
+.cardsContainer {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;   
+}
+
+.cardItem {
+    display: flex;
+}
