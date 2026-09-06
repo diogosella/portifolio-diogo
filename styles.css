@@ -51,7 +51,7 @@ body {
 }
 
 .heroSubtitle {
-    margin: 2vh 0;
+    margin: 4vh 0 2vh 0;
 }
 
 .subtitle {
@@ -64,16 +64,25 @@ body {
     color: rgba(255, 255, 255, 0.80);
 }
 
-button {
-    padding: 1.5vh 1.5vw;
-    border: none;
-
+.heroCta {
+    margin-top: 4vh;
 }
 
 .ctaPrimaryButton {
     margin-right: 1vw;
     background-color: var(--primary);
     font-size: 1.2vw;
+    text-decoration: none;
+    color: white;
+    padding: 1.5vh 1.5vw;
+    border: none;
+    transition: all ease 0.15s;
+
+}
+
+.ctaPrimaryButton:hover {
+    padding: 1.5vh 2vw;
+    font-weight: bold;
 }
 
 .ctaSecondaryButton {
@@ -81,22 +90,79 @@ button {
     border: 1px solid var(--primary);
     color: var(--primary);
     font-size: 1.2vw;
+    padding: 1.5vh 1.5vw;
+    text-decoration: none;
+    transition: all ease 0.2s;
 }
+
+.ctaSecondaryButton:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+
+
+/* Stack animation */
 
 .stackContainer {
     display: flex;
     flex-direction: row;
+    width: 16vw;
+    height: 10vh;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
     margin-top: 5vh;
 }
 
-.stackLogo {
-    width: 3vw;
+.stackContainer::before, .stackContainer::after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
 }
+
+.stackContainer::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+.stackContainer::before {
+    left: 0;
+    top: 0;
+}
+
+.stackList {
+    display: flex;
+    width: calc(50px * 8);
+    animation: scroll 10s 0.5s linear infinite;
+    gap: 1vw;
+    width: calc((50px + 1vw) * 8 - 1vw);
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(calc((-50px - 1vw) * 4));
+    }
+}
+
+.stackImage {
+    height: 50px;
+    width: 50px;
+}
+
 
 /* Cards section */
 
 .cardsContainer {
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: space-between;  
     margin-top: 8vh; 
@@ -106,6 +172,27 @@ button {
     display: flex;
 }
 
+.cardIcon {
+    display: flex;
+    align-items: center;
+}
+
+.cardImage {
+    width: 5vw;
+    margin-right: 1.5vw
+}
+
+.cardTitle {
+    color: white;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: bold;
+}
+
+.cardSubtitle {
+    color: white;
+    font-size: 1.5rem;
+}
 
 /* About section */
 
@@ -133,9 +220,16 @@ button {
     list-style: none;
     margin-left: 2vw;
     padding: 1vh 1vw;
+    cursor: pointer;
 }
 
-#selected-skill {
+.skillItem:hover {
+    background-color: var(--primary);
+    color: white;
+    transition: all ease 0.15s;
+}
+
+.selectedSkillItem {
     background-color: var(--primary);
     color: white;
 }
@@ -162,20 +256,29 @@ button {
     margin-top: 16vh;
 }
 .experienceNav {
-    width: 80vw;
     display: flex;
     justify-content: center;
+    width: 30vw;
+}
+
+.experienceText {
+    width: 70vw;
 }
 
 .experienceList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4vw;
+    gap: 3.5vw;
 }
 
 .experienceIcon {
     width: 100px;
     height: 100px;
+    cursor: pointer;
+}
+
+#xp-title {
+    color: var(--primary);
 }
 
 /* Projects Section */
@@ -193,39 +296,61 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     gap: 3vw;
-    margin: 0 auto;
 }
 
 .projectItem {
     display: flex;
     background-color: var(--secondary);
     padding: 4vh 2vw;
+    min-height: 45vh;
+    width: 33vw;
+
 }
 
 .projectInfo {
+    display: flex ;
+    flex-direction: column;
+    min-height: 100%;
     color: white;
     margin-left: 2vw;
 }
 
-.projectStack {
-    color: rgba(255, 255, 255, 0.337);
-}
 
 .projectIcon{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 .projectName {
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.8rem;
     margin-bottom: 1.5vh;
 }
 
 .projectDescription {
-    font-size: 1vw;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.574);
+    line-height: 3vh;
+    margin-bottom: 1.5vh;
+    white-space: pre-line;
+}
 
+
+.projectStack {
+    color: rgba(255, 255, 255, 0.337);
+    font-size: 0.8rem;
+    margin-bottom: 2.5vh;
+}
+
+.projectLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1vh 1vw;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    margin-top: auto;
 }
 
 .projectsGithub {
@@ -244,7 +369,6 @@ button {
 /* Contact Section */
 
 .contactContainer {
-    width: 90vw;
     background-color: var(--primary);
     margin-top: 16vh;
     padding-bottom: 8vh;
@@ -301,20 +425,29 @@ button {
 
 input, textarea {
     width: 30vw;
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: white;
     border: none;
-    background-color: rgba(255, 255, 255, 0.377);
+    background-color: rgba(255, 255, 255, 0.112);
     margin-bottom: 1vh;
     padding: 0.5vw;
+    font-family: 'Google Sans Flex', sans-serif;
 }
 
+input:focus {
+    border: none;
+    outline: none;
+}
 
+textarea:focus {
+    border: none;
+    outline: none;
+}
 
 label {
     color: white;
-    margin: 1.5vh 0;
-    font-size: 1.8vw;
+    margin: 1.5vh 0 0.5vh 0;
+    font-size: 1.2rem;
 }
 
 textarea {
@@ -326,5 +459,9 @@ textarea {
     padding: 1vh;
     margin-top: 4vh;
     font-family: 'Google Sans Flex', sans-serif;
-    font-size: 2vw;    
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: white;
+    color: var(--primary);
+    cursor: pointer;    
 }
