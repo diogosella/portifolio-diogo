@@ -11,19 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="siteHeader">
+        <img class="headerLogo" src="/assets/white-logo.png" alt="Logo">
+        <button class="langToggle" id="lang-toggle" type="button">EN</button>
+    </header>
     <div class="container">
         <div class="heroContainer">
             <div class="heroText">
                 <div class="heroTitle">
-                    <h1 class="heroTitle">Olá, eu sou</h1>
+                    <h1 class="heroTitle" data-i18n="hero.greeting">Olá, eu sou</h1>
                     <h1 class="heroTitle"><span class="primaryColor">Diogo</span></h1>
                 </div>
                 <div class="heroSubtitle">
-                    <p><span class="subtitle">Desenvolvedor Fullstack</span></p>
+                    <p><span class="subtitle" data-i18n="hero.role">Desenvolvedor Fullstack</span></p>
                 </div>
                 <div class="heroCta">
-                    <a class="ctaPrimaryButton" href="#contact">Entre em contato</a>
-                    <a class="ctaSecondaryButton" target="_blank" href="https://github.com/diogosella?tab=repositories">Ver Projetos</a>
+                    <a class="ctaPrimaryButton" href="#contact" data-i18n="hero.ctaPrimary">Entre em contato</a>
+                    <a class="ctaSecondaryButton" target="_blank" href="https://github.com/diogosella?tab=repositories" data-i18n="hero.ctaSecondary">Ver Projetos</a>
                 </div>
                 <div class="stackContainer">
                     <div class="stackList">
@@ -87,8 +91,8 @@
                         <img class="cardImage" src="/assets/coding-icon.png" alt="#">
                     </div>
                     <div class="cardText">
-                        <p><span class="cardTitle">4 anos</span></p>
-                        <p><span class="cardSubtitle">Programando</span></p>
+                        <p><span class="cardTitle" data-i18n="stats.years">4 anos</span></p>
+                        <p><span class="cardSubtitle" data-i18n="stats.coding">Programando</span></p>
                     </div>
                 </div>
 
@@ -98,7 +102,7 @@
                     </div>
                     <div class="cardText">
                         <p><span class="cardTitle">+60</span></p>
-                        <p><span class="cardSubtitle">Projetos criados</span></p>
+                        <p><span class="cardSubtitle" data-i18n="stats.projectsLabel">Projetos criados</span></p>
                     </div>
                 </div>
 
@@ -108,7 +112,7 @@
                     </div>
                     <div class="cardText">
                         <p><span class="cardTitle">Global</span></p>
-                        <p><span class="cardSubtitle">Experiência internacional</span></p>
+                        <p><span class="cardSubtitle" data-i18n="stats.globalLabel">Experiência internacional</span></p>
                     </div>
                 </div>
             </div>
@@ -121,11 +125,11 @@
                     <div class="aboutNavBar">
                         <nav>
                             <ul class="skillsList">
-                                <li class="skillItem selectedSkillItem" id="software-dev">Des. de Software</li>
-                                <li class="skillItem" id ="web-dev" >Des. Web</li>
-                                <li class="skillItem" id="design">Design</li>
-                                <li class="skillItem" id="automation">Automação</li>
-                                <li class="skillItem" id="seocc">SEO & Criação de conteúdo</li>
+                                <li class="skillItem selectedSkillItem" id="software-dev" data-i18n="about.navSoftware">Des. de Software</li>
+                                <li class="skillItem" id ="web-dev" data-i18n="about.navWeb">Des. Web</li>
+                                <li class="skillItem" id="design" data-i18n="about.navDesign">Design</li>
+                                <li class="skillItem" id="automation" data-i18n="about.navAutomation">Automação</li>
+                                <li class="skillItem" id="seocc" data-i18n="about.navSeo">SEO & Criação de conteúdo</li>
                             </ul>
                         </nav>
                     </div>
@@ -164,17 +168,17 @@
 
             <div class="projectsContainer">
                 <div class="projectsTitle">
-                    <p class="listTitle">Projetos relevantes</p>
-                    <p class="subtitle">Confira alguns dos projetos criados durante esse período</p>
+                    <p class="listTitle" data-i18n="projects.title">Projetos relevantes</p>
+                    <p class="subtitle" data-i18n="projects.subtitle">Confira alguns dos projetos criados durante esse período</p>
                 </div>
 
                 <div class="projectsShowcase">
                     </div>
-                    
+
                 </div>
 
                 <div class="projectsGithub">
-                    <a class="allProjectsButton" href="https://github.com/diogosella" target="_blank">Ver mais</a>
+                    <a class="allProjectsButton" href="https://github.com/diogosella" target="_blank" data-i18n="projects.viewMore">Ver mais</a>
                 </div>
             </div>
 
@@ -184,32 +188,32 @@
                     <div class="contactTitle">
                         <div class="contactMain">
                             <img class="contactLogo" src="/assets/white-logo.png" alt="Logo">
-                            <p class="contactText">Vamos conversar!</p>
-                            <p class="contactSubtext">Tem algum projeto/oportunidade para colaborarmos juntos? Me envie um e-mail!</p>
-                            <p class="emailAdvice">(Esse formulário irá enviar um email para <b>diogosees@gmail.com</b>)</p>
+                            <p class="contactText" data-i18n="contact.title">Vamos conversar!</p>
+                            <p class="contactSubtext" data-i18n="contact.subtitle">Tem algum projeto/oportunidade para colaborarmos juntos? Me envie um e-mail!</p>
+                            <p class="emailAdvice" data-i18n="contact.emailAdvice">(Esse formulário irá enviar um email para <b>diogosees@gmail.com</b>)</p>
                         </div>
-                    
+
                     <div class="contactSocial">
-                        <p class="subtitle">Me encontre também em:</p>
+                        <p class="subtitle" data-i18n="contact.social">Me encontre também em:</p>
                             <a target="_blank" href="https://www.linkedin.com/in/diogo-sela-6433272aa/"><img class="socialIcon" src="/assets/social/linkedin-logo.png" alt=""></a>
                             <a target="_blank" href="https://github.com/diogosella"><img class="socialIcon" src="/assets/social/github-logo.png" alt=""></a>
                     </div>
                     </div>
 
                     <form class="contactForm" id="contact-form">
-                                <label>Nome</label>
+                                <label data-i18n="form.name">Nome</label>
                                 <input type="text" name="name" required>
 
-                                <label>Email</label>
+                                <label data-i18n="form.email">Email</label>
                                 <input type="email" name="email" required>
-                                
-                                <label>Assunto</label>
+
+                                <label data-i18n="form.subject">Assunto</label>
                                 <input type="text" name="title" required>
-                                
-                                <label>Mensagem</label>
+
+                                <label data-i18n="form.message">Mensagem</label>
                                 <textarea name="message" required></textarea>
-                                
-                                <input class="sendButton" type="submit" value="Enviar">
+
+                                <input class="sendButton" type="submit" value="Enviar" data-i18n="form.submit">
                         </form>
                     </div>
                 </div>

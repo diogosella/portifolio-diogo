@@ -31,6 +31,53 @@ body {
     color: var(--primary)
 }
 
+/* Header */
+
+.siteHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 2.5vh 5vw;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 10;
+}
+
+.headerLogo {
+    height: 4vh;
+}
+
+.langToggle {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: white;
+    padding: 0.8vh 0.8vw;
+    font-family: 'Google Sans Flex', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.langToggle.lang-br {
+    background-image: url('/assets/languages/brazil-br.webp');
+}
+
+.langToggle.lang-en {
+    background-image: url('/assets/languages/english-usa.jpg');
+}
+
+.langToggle:hover {
+    opacity: 0.85;
+}
+
+
 /* Hero section */
 
 .heroContainer {
