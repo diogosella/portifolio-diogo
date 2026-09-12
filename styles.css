@@ -584,5 +584,365 @@ textarea {
     font-weight: 600;
     background-color: white;
     color: var(--primary);
-    cursor: pointer;    
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .siteHeader {
+        padding: 2vh 4vw;
+    }
+
+    .heroContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 88vw;
+        margin: 4vh 0;
+    }
+
+    .heroText {
+        margin-top: 4vh;
+        text-align: center;
+    }
+
+    .heroTitle {
+        font-size: 9vw;
+        line-height: 1.2;
+    }
+
+    .heroSubtitle {
+        display: flex;
+        justify-content: center;
+    }
+
+    .subtitle {
+        font-size: 2.2vw;
+    }
+
+    .heroCta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 1.5vh;
+    }
+
+    .stackContainer {
+        width: 70vw;
+        margin: 4vh auto 0;
+    }
+
+    .heroPicture {
+        display: flex;
+        justify-content: center;
+        margin-top: 4vh;
+    }
+
+    .heroImage {
+        position: static;
+        width: 60vw;
+    }
+
+    .cardsContainer {
+        width: 88vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4vh 6vw;
+    }
+
+    .cardItem {
+        width: 40%;
+        justify-content: center;
+    }
+
+    .cardTitle {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .aboutContainer {
+        flex-direction: column;
+        width: 88vw;
+        margin-top: 10vh;
+    }
+
+    .aboutImage {
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutImage img {
+        width: 60vw;
+    }
+
+    .aboutContent {
+        width: 100%;
+        margin: 4vh 0 0 0;
+    }
+
+    .skillsList {
+        flex-wrap: wrap;
+        gap: 1.5vh 0;
+    }
+
+    .skillItem {
+        margin-left: 0;
+        margin-right: 1.5vw;
+    }
+
+    .listTitle {
+        font-size: 5.5vw;
+        line-height: 1.4;
+    }
+
+    #skill-description, #xp-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    .experienceContainer {
+        flex-direction: column;
+        width: 88vw;
+        margin-top: 10vh;
+        min-height: auto;
+        padding: 4vh 4vw;
+    }
+
+    .experienceNav {
+        width: 100%;
+        margin-bottom: 4vh;
+    }
+
+    .experienceText {
+        width: 100%;
+    }
+
+    .projectsContainer {
+        width: 88vw;
+        margin-top: 10vh;
+    }
+
+    .projectsTitle {
+        margin-bottom: 4vh;
+    }
+
+    .projectsShowcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vh 3vw;
+    }
+
+    .projectIcon {
+        width: 10vw;
+    }
+
+    .contactContainer {
+        margin-top: 10vh;
+    }
+
+    .contactContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactTitle {
+        margin-top: 6vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contactText {
+        font-size: 6vw;
+    }
+
+    .contactSubtext {
+        width: 80vw;
+        font-size: 2.2vw;
+        text-align: center;
+    }
+
+    .contactSocial {
+        justify-content: center;
+        margin-top: 12vh;
+    }
+
+    .contactForm {
+        width: 80vw;
+        margin-top: 4vh;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .siteHeader {
+        padding: 2vh 5vw;
+    }
+
+    .headerLogo {
+        height: 3vh;
+    }
+
+    .langToggle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.7rem;
+        padding: 0;
+    }
+
+    .heroTitle {
+        font-size: 11vw;
+    }
+
+    .subtitle {
+        font-size: 4vw;
+    }
+
+    .tinierSubtitle {
+        font-size: 3vw;
+    }
+
+    .ctaPrimaryButton, .ctaSecondaryButton {
+        font-size: 1rem;
+        padding: 1.5vh 4vw;
+    }
+
+    .stackContainer {
+        width: 85vw;
+    }
+
+    .stackImage {
+        height: 40px;
+        width: 40px;
+    }
+
+    .heroImage {
+        width: 80vw;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .cardItem {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .cardImage {
+        width: 12vw;
+        margin-right: 4vw;
+    }
+
+    .cardTitle {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+    }
+
+    .cardSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .aboutContainer {
+        margin-top: 8vh;
+    }
+
+    .aboutImage img {
+        width: 80vw;
+    }
+
+    .skillsList {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .skillItem {
+        flex: 0 0 auto;
+        font-size: 0.85rem;
+        padding: 1vh 3vw;
+        margin-left: 0;
+        margin-right: 2vw;
+    }
+
+    .listTitle {
+        font-size: 7vw;
+    }
+
+    #skill-description, #xp-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .experienceContainer {
+        margin-top: 6vh;
+    }
+
+    .experienceIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .projectsContainer {
+        margin-top: 8vh;
+    }
+
+    .projectsShowcase {
+        grid-template-columns: 1fr;
+    }
+
+    .projectItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projectIcon {
+        width: 25vw;
+        margin-bottom: 2vh;
+    }
+
+    .projectInfo {
+        margin-left: 0;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .projectLink {
+        margin-top: 2vh;
+    }
+
+    .contactContainer {
+        margin-top: 8vh;
+    }
+
+    .contactText {
+        font-size: 9vw;
+    }
+
+    .contactSubtext {
+        width: 90vw;
+        font-size: 4vw;
+    }
+
+    .contactLogo {
+        width: 30vw;
+    }
+
+    .socialIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contactForm {
+        width: 90vw;
+    }
+
+    label {
+        font-size: 1rem;
+    }
 }
